@@ -1,56 +1,36 @@
 export default function MBack() {
   return (
-    <section id="mback" className="py-24 md:py-32">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Image placeholder */}
-          <div className="relative">
-            <div className="absolute -inset-4 bg-accent/5 rounded-3xl blur-2xl" />
-            <div className="relative aspect-[4/3] img-placeholder rounded-2xl border border-card-border">
-              <div className="text-zinc-600 text-center p-8">
-                <div className="text-5xl mb-4">🧲</div>
-                <p>MBack + M1 image</p>
-                <p className="text-xs mt-1 text-zinc-700">Add to public/images/mback.png</p>
-              </div>
+    <section className="py-32 bg-surface-container-lowest" id="mback">
+      <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <div className="order-2 lg:order-1">
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-surface-container p-8 rounded-2xl border border-white/5">
+              <p className="text-primary text-3xl font-black mb-1">Nd</p>
+              <p className="text-zinc-500 text-[10px] uppercase tracking-widest font-bold">Neodymium</p>
+            </div>
+            <div className="bg-surface-container p-8 rounded-2xl border border-white/5">
+              <p className="text-primary text-3xl font-black mb-1">20mm</p>
+              <p className="text-zinc-500 text-[10px] uppercase tracking-widest font-bold">Magnet Diameter</p>
+            </div>
+            <div className="bg-surface-container p-8 rounded-2xl border border-white/5">
+              <p className="text-primary text-3xl font-black mb-1">&infin;</p>
+              <p className="text-zinc-500 text-[10px] uppercase tracking-widest font-bold">Surfaces</p>
+            </div>
+            <div className="bg-surface-container p-8 rounded-2xl border border-white/5">
+              <p className="text-primary text-3xl font-black mb-1">+</p>
+              <p className="text-zinc-500 text-[10px] uppercase tracking-widest font-bold">Accessories</p>
             </div>
           </div>
-
-          {/* Content */}
-          <div className="flex flex-col gap-6">
-            <div className="flex items-center gap-2 text-accent text-sm font-medium tracking-widest uppercase">
-              <span className="w-8 h-px bg-accent" />
-              The MBack
-            </div>
-
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-              Attach to <span className="gradient-text">anything</span>
-            </h2>
-
-            <p className="text-zinc-400 text-lg leading-relaxed">
-              The MBack is a lightweight circular device featuring a high-strength 20mm neodymium
-              magnet. Place it behind your clothing, and the Maglight M1 snaps on magnetically from
-              the front — giving you hands-free light wherever you go.
-            </p>
-
-            <div className="grid grid-cols-2 gap-4 mt-4">
-              <div className="feature-card rounded-xl bg-card-bg p-5">
-                <div className="text-accent font-bold text-2xl mb-1">Nd</div>
-                <div className="text-sm text-zinc-400">Neodymium magnets</div>
-              </div>
-              <div className="feature-card rounded-xl bg-card-bg p-5">
-                <div className="text-accent font-bold text-2xl mb-1">20mm</div>
-                <div className="text-sm text-zinc-400">Magnet diameter</div>
-              </div>
-              <div className="feature-card rounded-xl bg-card-bg p-5">
-                <div className="text-accent font-bold text-2xl mb-1">∞</div>
-                <div className="text-sm text-zinc-400">Surfaces compatible</div>
-              </div>
-              <div className="feature-card rounded-xl bg-card-bg p-5">
-                <div className="text-accent font-bold text-2xl mb-1">+</div>
-                <div className="text-sm text-zinc-400">Future accessories</div>
-              </div>
-            </div>
-          </div>
+        </div>
+        <div className="order-1 lg:order-2">
+          <p className="text-primary text-[10px] font-bold uppercase tracking-[0.3em] mb-4">— THE MBACK</p>
+          <h2 className="text-5xl md:text-6xl font-bold tracking-tight text-gradient-gold mb-8">Attach to anything</h2>
+          <p className="text-zinc-400 text-lg mb-6 leading-relaxed">
+            The MBack isn&apos;t just a clip; it&apos;s a modular ecosystem. Using industrial-grade N52 magnets, the M1 snaps onto steel beams, car hoods, or our custom magnetic mounts.
+          </p>
+          <p className="text-zinc-400 text-lg leading-relaxed">
+            Swap between the bike mount, the wall plate, or the universal clip in seconds. No screws, no friction, just pure magnetic attraction.
+          </p>
         </div>
       </div>
     </section>

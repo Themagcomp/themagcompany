@@ -1,89 +1,70 @@
-const specs = [
-  { label: "Processor", value: "RP2350" },
-  { label: "LEDs", value: "6 front-facing" },
-  { label: "Battery", value: "800 mAh Li-ion" },
-  { label: "Charge Time", value: "45 minutes" },
-  { label: "Charging", value: "USB-C (IPX6)" },
-  { label: "Buttons", value: "3 (mode, +, -)" },
-  { label: "Brightness", value: "50–400 lumens" },
-  { label: "Board", value: "Custom FR4" },
-];
-
-const materials = [
-  { name: "PA12 Nylon", desc: "Durable casing" },
-  { name: "Black Oxide M3", desc: "Stainless screws" },
-  { name: "TPU", desc: "Gasket & buttons" },
-  { name: "Polycarbonate", desc: "Light window" },
-];
-
 export default function Internals() {
   return (
-    <section id="specs" className="py-24 md:py-32">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-2 text-accent text-sm font-medium tracking-widest uppercase mb-4">
-            <span className="w-8 h-px bg-accent" />
-            Specs & Internals
-            <span className="w-8 h-px bg-accent" />
+    <section className="py-32 px-8 max-w-7xl mx-auto" id="specs">
+      <div className="text-center mb-20">
+        <h2 className="text-primary text-[10px] font-bold uppercase tracking-[0.3em] mb-4">— Specs &amp; Internals —</h2>
+        <h3 className="text-4xl font-bold tracking-tight text-white">Precision Engineering</h3>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+        {/* Technical Table */}
+        <div className="lg:col-span-2 bg-[#111111] p-10 rounded-2xl border border-white/5">
+          <h4 className="text-white text-[10px] uppercase tracking-[0.2em] font-bold mb-8 border-b border-white/5 pb-4">Internal Hardware</h4>
+          <div className="space-y-6">
+            <div className="flex justify-between items-center border-b border-white/5 pb-4">
+              <span className="text-zinc-500 text-sm">Processor</span>
+              <span className="text-white font-medium">Raspberry Pi RP2350</span>
+            </div>
+            <div className="flex justify-between items-center border-b border-white/5 pb-4">
+              <span className="text-zinc-500 text-sm">LED Array</span>
+              <span className="text-white font-medium">6 Front-Facing SMD High-CRI</span>
+            </div>
+            <div className="flex justify-between items-center border-b border-white/5 pb-4">
+              <span className="text-zinc-500 text-sm">Optics</span>
+              <span className="text-white font-medium">Total Internal Reflection (TIR)</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-zinc-500 text-sm">Charging</span>
+              <span className="text-white font-medium">USB-C Fast Charge (15 min 80%)</span>
+            </div>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-            Engineered for <span className="gradient-text">performance</span>
-          </h2>
-          <p className="text-zinc-400 mt-4 max-w-2xl mx-auto text-lg">
-            A custom compact circuit board delivers optimized brilliance and functionality.
-          </p>
         </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Specs table */}
-          <div className="flex flex-col gap-1">
-            <h3 className="text-lg font-semibold mb-4 text-zinc-300">Technical Specifications</h3>
-            {specs.map((spec, i) => (
-              <div
-                key={spec.label}
-                className={`flex items-center justify-between py-3 px-4 rounded-lg ${
-                  i % 2 === 0 ? "bg-card-bg" : ""
-                }`}
-              >
-                <span className="text-zinc-400">{spec.label}</span>
-                <span className="font-medium text-foreground">{spec.value}</span>
-              </div>
-            ))}
+        {/* Materials Grid */}
+        <div className="bg-[#111111] p-10 rounded-2xl border border-white/5">
+          <h4 className="text-white text-[10px] uppercase tracking-[0.2em] font-bold mb-8 border-b border-white/5 pb-4">Build Materials</h4>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="p-4 rounded-xl bg-surface-container-low text-center">
+              <p className="text-primary font-bold text-xs mb-1">PA12</p>
+              <p className="text-zinc-500 text-[8px] uppercase tracking-widest">Nylon</p>
+            </div>
+            <div className="p-4 rounded-xl bg-surface-container-low text-center">
+              <p className="text-primary font-bold text-xs mb-1">M3</p>
+              <p className="text-zinc-500 text-[8px] uppercase tracking-widest">Black Oxide</p>
+            </div>
+            <div className="p-4 rounded-xl bg-surface-container-low text-center">
+              <p className="text-primary font-bold text-xs mb-1">TPU</p>
+              <p className="text-zinc-500 text-[8px] uppercase tracking-widest">Sealants</p>
+            </div>
+            <div className="p-4 rounded-xl bg-surface-container-low text-center">
+              <p className="text-primary font-bold text-xs mb-1">PC</p>
+              <p className="text-zinc-500 text-[8px] uppercase tracking-widest">Polycarb</p>
+            </div>
           </div>
-
-          {/* Materials */}
-          <div className="flex flex-col gap-6">
-            <h3 className="text-lg font-semibold mb-2 text-zinc-300">Build Materials</h3>
-            <div className="grid grid-cols-2 gap-4">
-              {materials.map((mat) => (
-                <div
-                  key={mat.name}
-                  className="feature-card rounded-xl bg-card-bg p-6 flex flex-col gap-2"
-                >
-                  <span className="text-accent font-bold">{mat.name}</span>
-                  <span className="text-sm text-zinc-500">{mat.desc}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Battery stats */}
-            <div className="feature-card rounded-2xl bg-card-bg p-8 mt-2">
-              <h4 className="text-lg font-semibold mb-6">Power</h4>
-              <div className="grid grid-cols-3 gap-6 text-center">
-                <div>
-                  <div className="text-3xl font-bold text-accent">USB-C</div>
-                  <div className="text-xs text-zinc-500 mt-1">Charging</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-accent">45 min</div>
-                  <div className="text-xs text-zinc-500 mt-1">Recharge time</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-accent">10 hr</div>
-                  <div className="text-xs text-zinc-500 mt-1">Battery life</div>
-                </div>
-              </div>
-            </div>
+        </div>
+      </div>
+      {/* Wide Power Card */}
+      <div className="bg-[#111111] p-10 rounded-2xl border border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div>
+          <h4 className="text-white font-bold text-xl mb-2">Advanced Power Management</h4>
+          <p className="text-zinc-500 text-sm">Dynamic thermal regulation ensures the M1 never overheats, preserving battery life and LED integrity.</p>
+        </div>
+        <div className="flex gap-12">
+          <div className="text-center">
+            <p className="text-primary text-3xl font-black leading-none mb-1">850mAh</p>
+            <p className="text-zinc-500 text-[8px] uppercase tracking-widest">Capacity</p>
+          </div>
+          <div className="text-center">
+            <p className="text-primary text-3xl font-black leading-none mb-1">2yr</p>
+            <p className="text-zinc-500 text-[8px] uppercase tracking-widest">Warranty</p>
           </div>
         </div>
       </div>

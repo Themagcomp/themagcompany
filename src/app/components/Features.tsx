@@ -1,100 +1,46 @@
-const features = [
-  {
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
-        <path d="M8 12l2-6h4l2 6-2 6h-4L8 12z" />
-      </svg>
-    ),
-    title: "Magnetic Technology",
-    description:
-      "Strong neodymium magnet attaches to any magnetic surface. Pair with the MBack to attach to clothing and more.",
-  },
-  {
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <circle cx="12" cy="12" r="5" />
-        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
-      </svg>
-    ),
-    title: "50–400 Lumens",
-    description:
-      "Two dedicated buttons let you adjust brightness from a subtle glow to a powerful 400-lumen beam.",
-  },
-  {
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-      </svg>
-    ),
-    title: "4 Light Modes",
-    description:
-      "Cycle between ON, FLASH, STROBE, and OFF. Hold the mode button for 3 seconds to activate SOS.",
-  },
-  {
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <rect x="6" y="7" width="12" height="14" rx="2" />
-        <path d="M10 7V5a2 2 0 014 0v2" />
-        <path d="M12 12v3" />
-      </svg>
-    ),
-    title: "10-Hour Battery",
-    description:
-      "800 mAh li-ion battery lasts up to 10 hours. Recharge in just 45 minutes with USB-C.",
-  },
-  {
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z" />
-      </svg>
-    ),
-    title: "IPX6 Waterproof",
-    description:
-      "Withstands powerful water jets from any direction. Built for rain, snow, and the outdoors.",
-  },
-  {
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <rect x="4" y="4" width="16" height="16" rx="2" />
-        <path d="M9 9h6v6H9z" />
-      </svg>
-    ),
-    title: "Ultra Compact",
-    description:
-      "Just 50 x 48 x 20 mm — fits in your pocket, clips to your gear, and goes anywhere you do.",
-  },
-];
-
 export default function Features() {
   return (
-    <section id="features" className="py-24 md:py-32">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-2 text-accent text-sm font-medium tracking-widest uppercase mb-4">
-            <span className="w-8 h-px bg-accent" />
-            Features
-            <span className="w-8 h-px bg-accent" />
-          </div>
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-            Built for <span className="gradient-text">every adventure</span>
-          </h2>
-          <p className="text-zinc-400 mt-4 max-w-2xl mx-auto text-lg">
-            The Maglight M1 packs serious performance into a pocket-sized package.
-          </p>
+    <section className="py-32 px-8 max-w-7xl mx-auto" id="features">
+      <div className="text-center mb-20">
+        <h2 className="text-primary text-[10px] font-bold uppercase tracking-[0.3em] mb-4">— Features —</h2>
+        <h3 className="text-4xl md:text-5xl font-bold tracking-tight text-white">Engineered for Extremes</h3>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Feature Card 1 */}
+        <div className="bg-[#111111] p-10 rounded-2xl border border-white/5 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(184,144,98,0.1)] transition-all group">
+          <span className="material-symbols-outlined text-primary text-4xl mb-6 block">nest_cam_magnet_mount</span>
+          <h4 className="text-white text-xl font-bold mb-3">Magnetic Tech</h4>
+          <p className="text-zinc-500 text-sm leading-relaxed">Integrated N52 neodymium magnets for instant attachment to any metallic surface.</p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature) => (
-            <div
-              key={feature.title}
-              className="feature-card rounded-2xl bg-card-bg p-8 flex flex-col gap-4"
-            >
-              <div className="text-accent">{feature.icon}</div>
-              <h3 className="text-xl font-semibold">{feature.title}</h3>
-              <p className="text-zinc-400 leading-relaxed">{feature.description}</p>
-            </div>
-          ))}
+        {/* Feature Card 2 */}
+        <div className="bg-[#111111] p-10 rounded-2xl border border-white/5 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(184,144,98,0.1)] transition-all group">
+          <span className="material-symbols-outlined text-primary text-4xl mb-6 block">light_mode</span>
+          <h4 className="text-white text-xl font-bold mb-3">50-400 Lumens</h4>
+          <p className="text-zinc-500 text-sm leading-relaxed">Adjustable brightness levels to suit everything from reading to trail blazing.</p>
+        </div>
+        {/* Feature Card 3 */}
+        <div className="bg-[#111111] p-10 rounded-2xl border border-white/5 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(184,144,98,0.1)] transition-all group">
+          <span className="material-symbols-outlined text-primary text-4xl mb-6 block">settings_input_antenna</span>
+          <h4 className="text-white text-xl font-bold mb-3">4 Light Modes</h4>
+          <p className="text-zinc-500 text-sm leading-relaxed">Toggle between flood, spot, strobe, and a soft ambient mood setting.</p>
+        </div>
+        {/* Feature Card 4 */}
+        <div className="bg-[#111111] p-10 rounded-2xl border border-white/5 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(184,144,98,0.1)] transition-all group">
+          <span className="material-symbols-outlined text-primary text-4xl mb-6 block">battery_very_low</span>
+          <h4 className="text-white text-xl font-bold mb-3">10hr Battery</h4>
+          <p className="text-zinc-500 text-sm leading-relaxed">High-density lithium polymer core provides consistent power for all-night use.</p>
+        </div>
+        {/* Feature Card 5 */}
+        <div className="bg-[#111111] p-10 rounded-2xl border border-white/5 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(184,144,98,0.1)] transition-all group">
+          <span className="material-symbols-outlined text-primary text-4xl mb-6 block">water_drop</span>
+          <h4 className="text-white text-xl font-bold mb-3">IPX6 Rated</h4>
+          <p className="text-zinc-500 text-sm leading-relaxed">Fully sealed architectural design protects against heavy rain and dust ingress.</p>
+        </div>
+        {/* Feature Card 6 */}
+        <div className="bg-[#111111] p-10 rounded-2xl border border-white/5 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(184,144,98,0.1)] transition-all group">
+          <span className="material-symbols-outlined text-primary text-4xl mb-6 block">compress</span>
+          <h4 className="text-white text-xl font-bold mb-3">Ultra Compact</h4>
+          <p className="text-zinc-500 text-sm leading-relaxed">Smaller than a car key fob. Fits into any pocket, pouch, or palm seamlessly.</p>
         </div>
       </div>
     </section>

@@ -6,41 +6,25 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-card-border">
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="text-xl font-bold tracking-tight">
-          <span className="text-foreground">THE MAG</span>
-          <span className="text-accent"> COMPANY</span>
-        </a>
-
-        {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-8 text-sm text-zinc-400">
-          <a href="#features" className="hover:text-foreground transition-colors">
-            Features
-          </a>
-          <a href="#mback" className="hover:text-foreground transition-colors">
-            MBack
-          </a>
-          <a href="#specs" className="hover:text-foreground transition-colors">
-            Specs
-          </a>
-          <a href="#roadmap" className="hover:text-foreground transition-colors">
-            Roadmap
-          </a>
-          <a href="#about" className="hover:text-foreground transition-colors">
-            About
-          </a>
-          <a
-            href="#hero"
-            className="bg-accent text-black px-5 py-2 rounded-full text-sm font-semibold hover:bg-accent-light transition-colors"
-          >
-            Back This Project
-          </a>
+    <nav className="fixed top-0 w-full z-50 bg-[#050505]/40 backdrop-blur-md shadow-[0_0_30px_rgba(184,144,98,0.05)]">
+      <div className="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+        <div className="text-xl font-bold tracking-tighter text-white/90 group cursor-pointer">
+          THE MAG COMPANY
         </div>
+        <div className="hidden md:flex items-center gap-8">
+          <a className="text-white border-b-2 border-[#ebbf8d] pb-1 text-[10px] uppercase tracking-widest font-bold" href="#features">Features</a>
+          <a className="text-zinc-400 hover:text-white transition-colors text-[10px] uppercase tracking-widest font-bold" href="#mback">MBack</a>
+          <a className="text-zinc-400 hover:text-white transition-colors text-[10px] uppercase tracking-widest font-bold" href="#specs">Specs</a>
+          <a className="text-zinc-400 hover:text-white transition-colors text-[10px] uppercase tracking-widest font-bold" href="#roadmap">Roadmap</a>
+          <a className="text-zinc-400 hover:text-white transition-colors text-[10px] uppercase tracking-widest font-bold" href="#about">About</a>
+        </div>
+        <button className="hidden md:block bg-[#ebbf8d] text-[#452b05] px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest hover:scale-105 transition-all duration-300 active:scale-95">
+          Back This Project
+        </button>
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden text-foreground"
+          className="md:hidden text-white"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -56,15 +40,15 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-background/95 backdrop-blur-md border-t border-card-border px-6 py-4 flex flex-col gap-4 text-sm">
-          <a href="#features" onClick={() => setMobileOpen(false)} className="text-zinc-400 hover:text-foreground">Features</a>
-          <a href="#mback" onClick={() => setMobileOpen(false)} className="text-zinc-400 hover:text-foreground">MBack</a>
-          <a href="#specs" onClick={() => setMobileOpen(false)} className="text-zinc-400 hover:text-foreground">Specs</a>
-          <a href="#roadmap" onClick={() => setMobileOpen(false)} className="text-zinc-400 hover:text-foreground">Roadmap</a>
-          <a href="#about" onClick={() => setMobileOpen(false)} className="text-zinc-400 hover:text-foreground">About</a>
-          <a href="#hero" onClick={() => setMobileOpen(false)} className="bg-accent text-black px-5 py-2 rounded-full text-sm font-semibold text-center">
+        <div className="md:hidden bg-[#050505]/95 backdrop-blur-md border-t border-white/5 px-8 py-6 flex flex-col gap-4">
+          <a href="#features" onClick={() => setMobileOpen(false)} className="text-zinc-400 hover:text-white text-[10px] uppercase tracking-widest font-bold">Features</a>
+          <a href="#mback" onClick={() => setMobileOpen(false)} className="text-zinc-400 hover:text-white text-[10px] uppercase tracking-widest font-bold">MBack</a>
+          <a href="#specs" onClick={() => setMobileOpen(false)} className="text-zinc-400 hover:text-white text-[10px] uppercase tracking-widest font-bold">Specs</a>
+          <a href="#roadmap" onClick={() => setMobileOpen(false)} className="text-zinc-400 hover:text-white text-[10px] uppercase tracking-widest font-bold">Roadmap</a>
+          <a href="#about" onClick={() => setMobileOpen(false)} className="text-zinc-400 hover:text-white text-[10px] uppercase tracking-widest font-bold">About</a>
+          <button className="bg-[#ebbf8d] text-[#452b05] px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest mt-2">
             Back This Project
-          </a>
+          </button>
         </div>
       )}
     </nav>
