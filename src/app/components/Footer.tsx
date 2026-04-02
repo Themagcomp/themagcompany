@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="w-full border-t border-white/5 bg-[#0e0e0e]">
+    <footer className="w-full border-t border-white/5">
       <div className="flex flex-col md:flex-row justify-between items-center w-full px-8 py-12 gap-6 max-w-7xl mx-auto">
         <div className="text-lg font-bold tracking-tighter text-white">
           THE MAG COMPANY

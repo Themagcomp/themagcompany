@@ -1,50 +1,52 @@
 export default function Hero() {
   return (
-    <section className="min-h-screen pt-32 pb-24 px-8 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#050505]">
       {/* Ambient Background Glows */}
-      <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-primary-container/5 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-[20%] right-[-5%] w-[40%] h-[40%] bg-primary-container/5 blur-[100px] rounded-full pointer-events-none" />
+      <div className="absolute top-[15%] right-[15%] w-[600px] h-[600px] blur-[180px] rounded-full pointer-events-none" style={{background: 'rgba(184, 144, 98, 0.15)'}} />
+      <div className="absolute bottom-[10%] left-[-5%] w-[300px] h-[300px] blur-[100px] rounded-full pointer-events-none" style={{background: 'rgba(235, 191, 141, 0.08)'}} />
 
-      <div className="relative z-10">
-        <p className="text-primary text-[10px] font-bold uppercase tracking-[0.3em] mb-4">— INTRODUCING</p>
-        <h1 className="text-7xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-6">
-          <span className="text-gradient-gold block">Maglight</span>
-          <span className="text-white block">M1</span>
-        </h1>
-        <p className="text-zinc-400 text-lg font-medium max-w-md mb-10 leading-relaxed">
-          The world&apos;s most versatile everyday carry light. Engineered for durability, powered by magnets, and designed for the nocturnal explorer.
-        </p>
-        <div className="flex flex-wrap gap-4">
-          <button className="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-4 rounded-full font-bold uppercase tracking-widest text-xs gold-glow hover:scale-105 transition-all duration-300">
-            Back on Kickstarter — April 2026
-          </button>
-          <button className="border border-outline-variant/30 text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest text-xs backdrop-blur-sm hover:bg-white/5 transition-all">
-            Explore Features
-          </button>
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-8">
+        <div className="text-center">
+          <p className="text-primary text-[10px] font-bold uppercase tracking-[0.3em] mb-8">— Introducing —</p>
+          <h1 className="text-7xl md:text-[9rem] font-black tracking-tighter leading-none pb-2">
+            <span className="text-gradient-gold inline-block py-2">Maglight</span>
+            <br />
+            <span className="text-on-surface inline-block py-1">M1</span>
+          </h1>
+          <p className="text-on-surface-variant text-xl md:text-2xl font-light max-w-xl mx-auto leading-relaxed mt-8 mb-14 tracking-wide">
+            Pocket-sized. Magnetic. Virtually indestructible.
+          </p>
+          <div className="flex justify-center gap-5 mb-16">
+            <button className="gold-gradient text-on-primary px-10 py-5 rounded-full font-bold text-xs uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_rgba(184,144,98,0.3)]">
+              Back on Kickstarter
+            </button>
+            <a href="#features" className="px-10 py-5 rounded-full border border-outline-variant/20 font-bold text-xs uppercase tracking-widest hover:bg-white/5 transition-colors text-on-surface-variant">
+              Explore
+            </a>
+          </div>
         </div>
-      </div>
 
-      <div className="grid grid-cols-2 gap-4 relative">
-        {/* Specs Badges */}
-        <div className="glass-card p-8 rounded-2xl flex flex-col justify-between h-48 hover:translate-y-[-4px] transition-transform">
-          <span className="text-primary font-bold text-3xl">IPX6</span>
-          <span className="text-zinc-500 text-[10px] uppercase tracking-widest">Waterproof</span>
-        </div>
-        <div className="glass-card p-8 rounded-2xl flex flex-col justify-between h-48 mt-8 hover:translate-y-[-4px] transition-transform">
-          <span className="text-primary font-bold text-3xl">400</span>
-          <span className="text-zinc-500 text-[10px] uppercase tracking-widest">Lumens</span>
-        </div>
-        <div className="glass-card p-8 rounded-2xl flex flex-col justify-between h-48 hover:translate-y-[-4px] transition-transform">
-          <span className="text-primary font-bold text-3xl">10hr</span>
-          <span className="text-zinc-500 text-[10px] uppercase tracking-widest">Battery</span>
-        </div>
-        <div className="glass-card p-8 rounded-2xl flex flex-col justify-between h-48 mt-8 hover:translate-y-[-4px] transition-transform">
-          <span className="text-primary font-bold text-3xl">50g</span>
-          <span className="text-zinc-500 text-[10px] uppercase tracking-widest">Lightweight</span>
-        </div>
-        {/* Hero Image Placeholder Decor */}
-        <div className="absolute inset-0 -z-10 opacity-20 scale-125 blur-3xl pointer-events-none">
-          <div className="w-full h-full bg-gradient-to-br from-primary to-transparent" />
+        {/* Spec badges */}
+        <div className="relative">
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[200px] blur-[100px] rounded-full pointer-events-none" style={{background: 'rgba(235, 191, 141, 0.1)'}} />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto relative z-10">
+            <div className="glass rounded-2xl p-6 text-center hover:-translate-y-1 transition-transform duration-300">
+              <span className="text-primary font-black text-3xl block mb-2">IPX6</span>
+              <span className="text-zinc-500 text-[9px] uppercase tracking-widest font-bold">Waterproof</span>
+            </div>
+            <div className="glass rounded-2xl p-6 text-center hover:-translate-y-1 transition-transform duration-300">
+              <span className="text-primary font-black text-3xl block mb-2">400</span>
+              <span className="text-zinc-500 text-[9px] uppercase tracking-widest font-bold">Lumens</span>
+            </div>
+            <div className="glass rounded-2xl p-6 text-center hover:-translate-y-1 transition-transform duration-300">
+              <span className="text-primary font-black text-3xl block mb-2">10hr</span>
+              <span className="text-zinc-500 text-[9px] uppercase tracking-widest font-bold">Battery</span>
+            </div>
+            <div className="glass rounded-2xl p-6 text-center hover:-translate-y-1 transition-transform duration-300">
+              <span className="text-primary font-black text-3xl block mb-2">50g</span>
+              <span className="text-zinc-500 text-[9px] uppercase tracking-widest font-bold">Ultralight</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>

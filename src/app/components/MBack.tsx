@@ -1,6 +1,6 @@
 export default function MBack() {
   return (
-    <section className="py-32 bg-surface-container-lowest" id="mback">
+    <section className="py-32" id="mback">
       <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
         <div className="order-2 lg:order-1">
           <div className="grid grid-cols-2 gap-4">

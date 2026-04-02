@@ -53,6 +53,21 @@ body {
   box-shadow: 0 0 30px rgba(184, 144, 98, 0.15);
 }
 
+.gold-gradient {
+  background: linear-gradient(135deg, #EBBF8D 0%, #B89062 100%);
+}
+
+.glass {
+  background: rgba(53, 53, 52, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-panel {
+  backdrop-filter: blur(20px);
+  background: rgba(19, 19, 19, 0.6);
+}
+
 .text-gradient-gold {
   background: linear-gradient(135deg, #ffffff 0%, #ebbf8d 100%);
   -webkit-background-clip: text;
