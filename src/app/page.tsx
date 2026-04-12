@@ -55,16 +55,16 @@ export default function Home() {
             MAGLIGHT
           </h1>
 
-          <div className="relative z-10 w-[88%] md:w-[72%] lg:w-[62%] xl:w-[56%] max-w-[880px] -mt-[2vw] md:-mt-[1.5vw] lg:-mt-[1vw]">
-            <div className="relative aspect-[3/2] rounded-[2rem] overflow-hidden shadow-[0_60px_140px_-30px_rgba(0,0,0,0.45)]">
+          <div className="relative z-10 w-[94%] md:w-[92%] lg:w-[88%] max-w-[1400px] mt-10 md:mt-14 lg:mt-16">
+            <div className="relative aspect-[16/9] rounded-[2.25rem] overflow-hidden shadow-[0_80px_160px_-40px_rgba(0,0,0,0.5)]">
               <Image
                 src="/m1-hero.png"
                 alt="Maglight M1 rendered at an angle"
                 fill
                 priority
-                sizes="(max-width: 768px) 88vw, (max-width: 1280px) 72vw, 880px"
-                className="object-cover scale-[1.08] select-none pointer-events-none"
-                style={{ objectPosition: "center 42%" }}
+                sizes="(max-width: 1400px) 92vw, 1400px"
+                className="object-cover scale-[1.06] select-none pointer-events-none"
+                style={{ objectPosition: "center 46%" }}
               />
             </div>
           </div>
