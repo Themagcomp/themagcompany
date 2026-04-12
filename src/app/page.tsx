@@ -42,44 +42,40 @@ export default function Home() {
       <main className="pt-14">
         <section
           id="overview"
-          className="relative min-h-screen flex flex-col items-center justify-start text-center px-6 pt-24 md:pt-28 pb-20 bg-black text-white overflow-hidden"
+          className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 pt-28 pb-16 bg-white text-on-surface overflow-hidden"
         >
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(60,80,120,0.18)_0%,_rgba(0,0,0,0)_60%)]"
-          />
+          <p className="relative z-20 text-xs md:text-sm font-semibold tracking-[0.28em] uppercase text-on-surface/50 mb-6">
+            Introducing
+          </p>
 
-          <div className="relative z-20 flex flex-col items-center">
-            <p className="text-xs md:text-sm font-semibold tracking-[0.28em] uppercase text-white/60 mb-6">
-              Introducing
-            </p>
-            <p className="text-2xl md:text-4xl font-medium tracking-tight text-white/90 mb-1">
-              Maglight
-            </p>
-            <h1 className="m1-wordmark text-[9rem] md:text-[16rem] lg:text-[19rem] leading-[0.82] font-black tracking-[-0.05em]">
-              M1
+          <div className="relative w-full flex items-center justify-center mb-10 md:mb-14">
+            <h1
+              aria-label="Maglight"
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[48%] text-[22vw] md:text-[19vw] lg:text-[17vw] font-black tracking-[-0.055em] leading-none text-on-surface whitespace-nowrap select-none pointer-events-none z-0"
+            >
+              MAGLIGHT
             </h1>
+
+            <div className="relative z-10 w-[58%] md:w-[50%] lg:w-[46%] max-w-[640px]">
+              <Image
+                src="/m1-hero.png"
+                alt="Maglight M1 rendered at an angle"
+                width={2528}
+                height={1684}
+                priority
+                className="w-full h-auto rounded-3xl shadow-[0_40px_100px_-30px_rgba(0,0,0,0.35)] select-none pointer-events-none"
+              />
+            </div>
           </div>
 
-          <div className="relative z-10 w-full max-w-5xl -mt-20 md:-mt-40 lg:-mt-52">
-            <Image
-              src="/m1-hero.png"
-              alt="Maglight M1 rendered at an angle"
-              width={2528}
-              height={1684}
-              priority
-              className="w-full h-auto select-none pointer-events-none"
-            />
-          </div>
-
-          <div className="relative z-20 flex flex-col items-center gap-6 -mt-10 md:-mt-20">
-            <p className="text-lg md:text-xl text-white/70 font-medium max-w-xl">
-              The world&apos;s most versatile high-performance light.
-            </p>
-            <button className="bg-white text-black px-8 py-3 rounded-full text-base font-semibold hover:bg-white/90 transition-all">
+          <div className="relative z-20 flex flex-col items-center gap-4">
+            <button className="bg-primary-container text-on-primary px-8 py-3 rounded-full text-base font-semibold hover:opacity-90 transition-all">
               Back on Kickstarter
             </button>
-            <p className="text-xs text-white/40 font-medium tracking-wide">
+            <p className="text-sm text-on-surface font-semibold">
+              From $49 or $12/mo. for 4 mos.
+            </p>
+            <p className="text-xs text-on-surface-variant/60 font-medium">
               Shipping worldwide Fall 2026
             </p>
           </div>
