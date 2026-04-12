@@ -1,3 +1,5 @@
+import AutoplayVideo from "./AutoplayVideo";
+
 export default function Home() {
   return (
     <>
@@ -155,23 +157,29 @@ export default function Home() {
             </p>
           </div>
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-stretch">
-            <div className="bento-card rounded-4xl p-12 flex flex-col items-center justify-center text-center">
-              <div className="w-full aspect-square rounded-3xl overflow-hidden mb-8 border border-black/5 bg-surface-dim/20">
-                <video
-                  className="w-full h-full object-cover"
+            <div className="bento-card rounded-4xl p-8 md:p-10 flex flex-col overflow-hidden">
+              <div className="relative w-full flex-grow min-h-[320px] rounded-3xl overflow-hidden bg-black mb-10">
+                <AutoplayVideo
                   src="/front-cover.mp4"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
+                  className="absolute inset-0 w-full h-full object-cover scale-[1.15]"
                 />
               </div>
-              <h4 className="text-xl font-bold mb-2">Compact Design</h4>
-              <p className="text-on-surface-variant">
-                Pocket-sized at just 50 × 48 × 20mm. Light enough to take
-                anywhere, small enough to forget it&apos;s there.
-              </p>
+              <div className="px-2">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3">
+                  Form Factor
+                </p>
+                <h4 className="text-3xl font-bold tracking-tight mb-4">
+                  Compact Design.
+                </h4>
+                <p className="text-base text-on-surface-variant leading-relaxed max-w-sm">
+                  Pocket-sized at just{" "}
+                  <span className="text-on-surface font-semibold">
+                    50 × 48 × 20mm
+                  </span>
+                  . Light enough to take anywhere, small enough to forget
+                  it&apos;s there.
+                </p>
+              </div>
             </div>
             <div className="bg-on-surface text-surface rounded-4xl p-12 flex flex-col justify-between overflow-hidden relative">
               <div className="relative z-10">
