@@ -5,22 +5,13 @@ import "./globals.css";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Maglight M1 | THE MAG COMPANY",
-  description:
-    "The world's most versatile everyday carry light. Engineered for durability, powered by magnets, and designed for the nocturnal explorer.",
-  keywords: [
-    "Maglight",
-    "magnetic light",
-    "portable light",
-    "hands-free light",
-    "IPX6",
-    "camping light",
-    "outdoor light",
-  ],
+  title: "Maglight M1 | Light. Attach. Go.",
+  description: "The world's most versatile high-performance light.",
 };
 
 export default function RootLayout({
@@ -29,14 +20,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`dark ${inter.variable} h-full antialiased`}>
+    <html lang="en" className={`light ${inter.variable}`}>
       <head>
         <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,100..700,0..1,-50..200&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="bg-surface text-on-surface antialiased">{children}</body>
     </html>
   );
 }

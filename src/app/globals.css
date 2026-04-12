@@ -1,80 +1,96 @@
 @import "tailwindcss";
 
-:root {
-  --background: #050505;
-  --foreground: #e5e2e1;
-}
+@theme {
+  --color-primary: #004e9f;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #0066cc;
+  --color-on-primary-container: #dfe8ff;
+  --color-primary-fixed: #d7e3ff;
+  --color-primary-fixed-dim: #aac7ff;
+  --color-on-primary-fixed: #001b3e;
+  --color-on-primary-fixed-variant: #00458e;
+  --color-inverse-primary: #aac7ff;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: #ebbf8d;
-  --color-primary-container: #b89062;
-  --color-primary-fixed: #ffddb9;
-  --color-on-primary: #452b05;
-  --color-on-primary-container: #442a05;
-  --color-surface: #131313;
-  --color-surface-dim: #131313;
-  --color-surface-container: #201f1f;
-  --color-surface-container-low: #1c1b1b;
-  --color-surface-container-high: #2a2a2a;
-  --color-surface-container-highest: #353534;
-  --color-surface-container-lowest: #0e0e0e;
-  --color-surface-variant: #353534;
-  --color-on-surface: #e5e2e1;
-  --color-on-surface-variant: #d3c4b7;
-  --color-outline: #9b8e82;
-  --color-outline-variant: #4f453b;
-  --color-secondary: #c6c5cf;
-  --color-secondary-container: #4a4b53;
+  --color-secondary: #495f87;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #b9cffd;
+  --color-on-secondary-container: #425880;
+  --color-secondary-fixed: #d7e3ff;
+  --color-secondary-fixed-dim: #b0c7f5;
+  --color-on-secondary-fixed: #001b3e;
+  --color-on-secondary-fixed-variant: #30476d;
+
+  --color-tertiary: #883700;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #af4900;
+  --color-on-tertiary-container: #ffe3d6;
+  --color-tertiary-fixed: #ffdbcb;
+  --color-tertiary-fixed-dim: #ffb692;
+  --color-on-tertiary-fixed: #341100;
+  --color-on-tertiary-fixed-variant: #793000;
+
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  --color-background: #f9f9fb;
+  --color-on-background: #1a1c1d;
+
+  --color-surface: #f9f9fb;
+  --color-on-surface: #1a1c1d;
+  --color-surface-dim: #d9dadc;
+  --color-surface-bright: #f9f9fb;
+  --color-surface-tint: #005cba;
+  --color-surface-variant: #e2e2e4;
+  --color-on-surface-variant: #414753;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f3f3f5;
+  --color-surface-container: #eeeef0;
+  --color-surface-container-high: #e8e8ea;
+  --color-surface-container-highest: #e2e2e4;
+  --color-inverse-surface: #2f3132;
+  --color-inverse-on-surface: #f0f0f2;
+
+  --color-outline: #727784;
+  --color-outline-variant: #c1c6d5;
+
   --font-sans: var(--font-inter);
   --font-headline: var(--font-inter);
   --font-body: var(--font-inter);
   --font-label: var(--font-inter);
+
+  --radius-4xl: 2.5rem;
 }
 
-* {
+html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #050505;
-  color: #e5e2e1;
   font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: #f9f9fb;
+  color: #1a1c1d;
 }
 
-.glass-card {
-  background: rgba(53, 53, 52, 0.4);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(235, 191, 141, 0.1);
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
-.gold-glow {
-  box-shadow: 0 0 30px rgba(184, 144, 98, 0.15);
-}
-
-.gold-gradient {
-  background: linear-gradient(135deg, #EBBF8D 0%, #B89062 100%);
-}
-
-.glass {
-  background: rgba(53, 53, 52, 0.4);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-
-.glass-panel {
-  backdrop-filter: blur(20px);
-  background: rgba(19, 19, 19, 0.6);
-}
-
-.text-gradient-gold {
-  background: linear-gradient(135deg, #ffffff 0%, #ebbf8d 100%);
+.apple-text-gradient {
+  background: linear-gradient(180deg, #1a1c1d 0%, #414753 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
-::selection {
-  background: rgba(235, 191, 141, 0.3);
+.bento-card {
+  background: #f5f5f7;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bento-card:hover {
+  transform: scale(1.01);
 }
