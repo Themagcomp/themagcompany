@@ -1,3 +1,4 @@
+import Image from "next/image";
 import AutoplayVideo from "./AutoplayVideo";
 
 export default function Home() {
@@ -41,38 +42,46 @@ export default function Home() {
       <main className="pt-14">
         <section
           id="overview"
-          className="min-h-[90vh] flex flex-col items-center justify-center text-center px-6 bg-white overflow-hidden"
+          className="relative min-h-screen flex flex-col items-center justify-start text-center px-6 pt-24 md:pt-28 pb-20 bg-black text-white overflow-hidden"
         >
-          <div className="max-w-4xl mx-auto mb-16">
-            <p className="text-sm font-semibold text-primary mb-4 tracking-wider uppercase">
-              Introducing M1
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(60,80,120,0.18)_0%,_rgba(0,0,0,0)_60%)]"
+          />
+
+          <div className="relative z-20 flex flex-col items-center">
+            <p className="text-xs md:text-sm font-semibold tracking-[0.28em] uppercase text-white/60 mb-6">
+              Introducing
             </p>
-            <h1 className="text-6xl md:text-8xl font-bold tracking-tight leading-[1.05] mb-8 apple-text-gradient">
-              LIGHT. ATTACH. GO.
+            <p className="text-2xl md:text-4xl font-medium tracking-tight text-white/90 mb-1">
+              Maglight
+            </p>
+            <h1 className="m1-wordmark text-[9rem] md:text-[16rem] lg:text-[19rem] leading-[0.82] font-black tracking-[-0.05em]">
+              M1
             </h1>
-            <div className="flex flex-col items-center gap-6">
-              <p className="text-xl md:text-2xl text-on-surface-variant font-medium max-w-2xl">
-                The world&apos;s most versatile high-performance light.
-              </p>
-              <div className="flex gap-4 mt-4">
-                <button className="bg-primary text-white px-8 py-3 rounded-full text-base font-semibold hover:opacity-90 transition-all">
-                  Back on Kickstarter
-                </button>
-              </div>
-              <p className="text-sm text-on-surface-variant/60 font-medium">
-                Shipping worldwide Fall 2024
-              </p>
-            </div>
           </div>
-          <div className="w-full max-w-6xl aspect-[21/9] bg-[#f5f5f7] rounded-4xl overflow-hidden flex items-center justify-center relative">
-            <span className="text-on-surface-variant/40 font-medium text-xl">
-              Product Video Placeholder
-            </span>
-            <div className="absolute bottom-8 left-8 text-left">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-on-surface-variant/30">
-                Cinematic Reveal
-              </p>
-            </div>
+
+          <div className="relative z-10 w-full max-w-5xl -mt-20 md:-mt-40 lg:-mt-52">
+            <Image
+              src="/m1-hero.png"
+              alt="Maglight M1 rendered at an angle"
+              width={2528}
+              height={1684}
+              priority
+              className="w-full h-auto select-none pointer-events-none"
+            />
+          </div>
+
+          <div className="relative z-20 flex flex-col items-center gap-6 -mt-10 md:-mt-20">
+            <p className="text-lg md:text-xl text-white/70 font-medium max-w-xl">
+              The world&apos;s most versatile high-performance light.
+            </p>
+            <button className="bg-white text-black px-8 py-3 rounded-full text-base font-semibold hover:bg-white/90 transition-all">
+              Back on Kickstarter
+            </button>
+            <p className="text-xs text-white/40 font-medium tracking-wide">
+              Shipping worldwide Fall 2026
+            </p>
           </div>
         </section>
 

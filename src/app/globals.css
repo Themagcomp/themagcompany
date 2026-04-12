@@ -94,3 +94,18 @@ body {
 .bento-card:hover {
   transform: scale(1.01);
 }
+
+.m1-wordmark {
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #e4e8ef 40%,
+    #9aa3b2 80%,
+    #6b7280 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: 0 4px 40px rgba(170, 199, 255, 0.15);
+}
