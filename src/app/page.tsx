@@ -42,34 +42,37 @@ export default function Home() {
       <main className="pt-14">
         <section
           id="overview"
-          className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 pt-28 pb-16 bg-white text-on-surface overflow-hidden"
+          className="relative min-h-[88vh] flex flex-col items-center justify-center text-center px-6 pt-20 pb-12 bg-white text-on-surface overflow-hidden"
         >
-          <p className="relative z-20 text-xs md:text-sm font-semibold tracking-[0.28em] uppercase text-on-surface/50 mb-6">
+          <p className="relative z-20 text-[0.7rem] md:text-xs font-semibold tracking-[0.32em] uppercase text-on-surface/45 mb-4 md:mb-6">
             Introducing
           </p>
 
-          <div className="relative w-full flex items-center justify-center mb-10 md:mb-14">
+          <div className="relative w-full flex items-center justify-center">
             <h1
               aria-label="Maglight"
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[48%] text-[22vw] md:text-[19vw] lg:text-[17vw] font-black tracking-[-0.055em] leading-none text-on-surface whitespace-nowrap select-none pointer-events-none z-0"
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[32vw] md:text-[26vw] lg:text-[23vw] font-black tracking-[-0.055em] leading-[0.82] text-on-surface whitespace-nowrap select-none pointer-events-none z-0"
             >
               MAGLIGHT
             </h1>
 
-            <div className="relative z-10 w-[58%] md:w-[50%] lg:w-[46%] max-w-[640px]">
-              <Image
-                src="/m1-hero.png"
-                alt="Maglight M1 rendered at an angle"
-                width={2528}
-                height={1684}
-                priority
-                className="w-full h-auto rounded-3xl shadow-[0_40px_100px_-30px_rgba(0,0,0,0.35)] select-none pointer-events-none"
-              />
+            <div className="relative z-10 w-[74%] md:w-[60%] lg:w-[54%] xl:w-[50%] max-w-[720px]">
+              <div className="relative aspect-[3/2] rounded-[2rem] overflow-hidden shadow-[0_60px_140px_-30px_rgba(0,0,0,0.45)]">
+                <Image
+                  src="/m1-hero.png"
+                  alt="Maglight M1 rendered at an angle"
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 74vw, (max-width: 1280px) 60vw, 720px"
+                  className="object-cover scale-[1.08] select-none pointer-events-none"
+                  style={{ objectPosition: "center 42%" }}
+                />
+              </div>
             </div>
           </div>
 
-          <div className="relative z-20 flex flex-col items-center gap-4">
-            <button className="bg-primary-container text-on-primary px-8 py-3 rounded-full text-base font-semibold hover:opacity-90 transition-all">
+          <div className="relative z-20 mt-10 md:mt-14 flex flex-col items-center gap-3">
+            <button className="bg-primary-container text-on-primary px-8 py-3 rounded-full text-base font-semibold hover:opacity-90 transition-all shadow-[0_10px_30px_-10px_rgba(0,102,204,0.5)]">
               Back on Kickstarter
             </button>
             <p className="text-sm text-on-surface font-semibold">
