@@ -89,9 +89,9 @@ export default function Home() {
               Adventure-proof by design.
             </h2>
             <p className="text-xl text-on-surface-variant leading-relaxed max-w-2xl mx-auto">
-              Crafted from aerospace-grade aluminum, the M1 is as light as it is
-              durable. It&apos;s the companion that doesn&apos;t just keep up—it
-              leads the way.
+              Engineered from impact-resistant polymers and sealed with TPU
+              gaskets, the M1 is as light as it is durable. It&apos;s the
+              companion that doesn&apos;t just keep up—it leads the way.
             </p>
           </div>
           <div className="max-w-6xl mx-auto aspect-video bg-[#f5f5f7] rounded-4xl flex items-center justify-center">
@@ -247,6 +247,36 @@ export default function Home() {
                 <h4 className="font-bold text-on-surface text-lg">-20°C Ready</h4>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="py-32 bg-black text-white px-6 overflow-hidden">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <p className="text-xs md:text-sm font-semibold tracking-[0.28em] uppercase text-white/50 mb-4">
+              Materials
+            </p>
+            <h2 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
+              Built from the ground up.
+            </h2>
+            <p className="text-xl text-white/70 leading-relaxed max-w-2xl mx-auto">
+              Every component chosen with intent. Resilient enough to take a
+              beating, refined enough to disappear into your daily carry.
+            </p>
+          </div>
+          <div className="max-w-6xl mx-auto">
+            <div className="relative aspect-video rounded-[2rem] overflow-hidden shadow-[0_80px_160px_-40px_rgba(0,0,0,0.6)]">
+              <Image
+                src="/m1-materials.png"
+                alt="Maglight M1 materials breakdown: PA12 Nylon casing, black oxide M3 screws, TPU gasket and buttons, polycarbonate window"
+                fill
+                sizes="(max-width: 1200px) 96vw, 1200px"
+                className="object-cover"
+              />
+            </div>
+            <p className="mt-6 text-center text-xs text-white/40 font-medium italic">
+              * Material spec reflects the base Kickstarter build. Stretch goals
+              will upgrade select components.
+            </p>
           </div>
         </section>
 
