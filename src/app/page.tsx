@@ -156,14 +156,21 @@ export default function Home() {
           </div>
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-stretch">
             <div className="bento-card rounded-4xl p-12 flex flex-col items-center justify-center text-center">
-              <div className="w-full aspect-square bg-surface-dim/20 rounded-3xl flex items-center justify-center mb-8 border border-black/5">
-                <span className="text-on-surface-variant/40 font-medium">
-                  Tactile Dial Close-up
-                </span>
+              <div className="w-full aspect-square rounded-3xl overflow-hidden mb-8 border border-black/5 bg-surface-dim/20">
+                <video
+                  className="w-full h-full object-cover"
+                  src="/front-cover.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                />
               </div>
-              <h4 className="text-xl font-bold mb-2">Tactile Response</h4>
+              <h4 className="text-xl font-bold mb-2">Compact Design</h4>
               <p className="text-on-surface-variant">
-                Precision knurled aluminum dial for instant, intuitive control.
+                Pocket-sized at just 50 × 48 × 20mm. Light enough to take
+                anywhere, small enough to forget it&apos;s there.
               </p>
             </div>
             <div className="bg-on-surface text-surface rounded-4xl p-12 flex flex-col justify-between overflow-hidden relative">
