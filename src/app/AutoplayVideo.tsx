@@ -5,9 +5,10 @@ import { useEffect, useRef } from "react";
 type Props = {
   src: string;
   className?: string;
+  loop?: boolean;
 };
 
-export default function AutoplayVideo({ src, className }: Props) {
+export default function AutoplayVideo({ src, className, loop = false }: Props) {
   const ref = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -32,7 +33,7 @@ export default function AutoplayVideo({ src, className }: Props) {
       src={src}
       autoPlay
       muted
-      loop
+      loop={loop}
       playsInline
       preload="auto"
       disablePictureInPicture

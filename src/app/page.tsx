@@ -162,22 +162,22 @@ export default function Home() {
               everything with the tactile, satisfying dial.
             </p>
           </div>
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-stretch">
-            <div className="bento-card rounded-4xl p-8 md:p-10 flex flex-col overflow-hidden">
-              <div className="relative w-full flex-grow min-h-[320px] rounded-3xl overflow-hidden bg-black mb-10">
+          <div className="max-w-[1400px] mx-auto grid md:grid-cols-2 gap-8 items-stretch">
+            <div className="bento-card rounded-4xl p-10 md:p-12 flex flex-col overflow-hidden">
+              <div className="relative w-full flex-grow min-h-[460px] md:min-h-[520px] rounded-3xl overflow-hidden bg-black mb-10">
                 <AutoplayVideo
                   src="/front-cover.mp4"
-                  className="absolute inset-0 w-full h-full object-cover scale-[1.15]"
+                  className="absolute inset-0 w-full h-full object-cover scale-[1.18]"
                 />
               </div>
               <div className="px-2">
                 <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3">
                   Form Factor
                 </p>
-                <h4 className="text-3xl font-bold tracking-tight mb-4">
+                <h4 className="text-4xl font-bold tracking-tight mb-4">
                   Compact Design.
                 </h4>
-                <p className="text-base text-on-surface-variant leading-relaxed max-w-sm">
+                <p className="text-lg text-on-surface-variant leading-relaxed max-w-md">
                   Pocket-sized at just{" "}
                   <span className="text-on-surface font-semibold">
                     50 × 48 × 20mm
@@ -187,15 +187,15 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="bg-on-surface text-surface rounded-4xl p-12 flex flex-col justify-between overflow-hidden relative">
+            <div className="bg-on-surface text-surface rounded-4xl p-10 md:p-14 flex flex-col justify-between overflow-hidden relative min-h-[720px]">
               <div className="relative z-10">
                 <span className="text-xs font-bold uppercase tracking-widest text-primary-fixed mb-4 block">
                   The Ecosystem
                 </span>
-                <h3 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+                <h3 className="text-5xl md:text-6xl font-bold tracking-tight mb-6">
                   Meet the MBack.
                 </h3>
-                <p className="text-lg text-surface-dim/80 leading-relaxed mb-10 max-w-sm">
+                <p className="text-lg text-surface-dim/80 leading-relaxed mb-10 max-w-md">
                   The ultimate mounting plate. Attach it to your backpack, bike,
                   or belt and the M1 becomes an extension of your movement.
                 </p>
@@ -209,7 +209,7 @@ export default function Home() {
                   </span>
                 </a>
               </div>
-              <div className="mt-12 md:absolute md:right-[-10%] md:bottom-[-5%] md:w-2/3 aspect-square bg-white/5 rounded-full flex items-center justify-center border border-white/10 backdrop-blur-sm">
+              <div className="mt-12 md:absolute md:right-[-12%] md:bottom-[-8%] md:w-3/4 aspect-square bg-white/5 rounded-full flex items-center justify-center border border-white/10 backdrop-blur-sm">
                 <span className="text-white/20 font-medium">MBack Plate</span>
               </div>
             </div>
