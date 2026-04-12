@@ -216,6 +216,39 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="relative min-h-[85vh] md:min-h-[90vh] bg-black overflow-hidden flex items-center">
+          <div className="absolute inset-0">
+            <Image
+              src="/m1-in-action.jpg"
+              alt="Maglight M1 magnetically attached to an electrical panel, beam cutting through the darkness"
+              fill
+              sizes="100vw"
+              className="object-cover object-right"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/75 to-transparent md:from-black md:via-black/60 md:to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+          </div>
+
+          <div className="relative z-10 w-full px-6 md:px-16 lg:px-24 py-24">
+            <div className="max-w-xl text-white">
+              <p className="text-xs md:text-sm font-semibold tracking-[0.28em] uppercase text-white/50 mb-5">
+                When it matters
+              </p>
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.03] mb-8">
+                When the lights
+                <br />
+                go out.
+              </h2>
+              <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-lg">
+                Snap it to the panel. Snap it to the toolbox. Snap it to the
+                rack in the basement. The M1 is already exactly where you
+                need it — hands free, beam steady, the moment the room goes
+                dark.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="py-32 bg-[#fbfbfd] px-6">
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-5xl md:text-7xl font-bold tracking-tighter mb-16 apple-text-gradient">
