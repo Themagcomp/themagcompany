@@ -55,7 +55,7 @@ export default function Home() {
             MAGLIGHT
           </h1>
 
-          <div className="relative z-10 w-[94%] md:w-[92%] lg:w-[88%] max-w-[1400px] mt-10 md:mt-14 lg:mt-16 hero-float">
+          <div className="relative z-10 w-[94%] md:w-[92%] lg:w-[88%] max-w-[1400px] mt-10 md:mt-14 lg:mt-16">
             <div className="relative aspect-[16/9] rounded-[2.25rem] overflow-hidden shadow-[0_80px_160px_-40px_rgba(0,0,0,0.5)]">
               <Image
                 src="/m1-hero-v2.png"
@@ -66,6 +66,17 @@ export default function Home() {
                 className="object-cover scale-[1.06] select-none pointer-events-none"
                 style={{ objectPosition: "center 46%" }}
               />
+              <div className="absolute inset-0 hero-float pointer-events-none">
+                <Image
+                  src="/m1-hero-fg.png"
+                  alt=""
+                  fill
+                  priority
+                  sizes="(max-width: 1400px) 92vw, 1400px"
+                  className="object-cover scale-[1.06] select-none"
+                  style={{ objectPosition: "center 46%" }}
+                />
+              </div>
             </div>
           </div>
 
