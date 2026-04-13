@@ -164,7 +164,7 @@ export default function Home() {
           </div>
           <div className="max-w-[1400px] mx-auto grid md:grid-cols-2 gap-8 items-stretch">
             <div className="bento-card rounded-4xl p-10 md:p-12 flex flex-col overflow-hidden">
-              <div className="relative w-full flex-grow min-h-[380px] md:min-h-[440px] rounded-3xl overflow-hidden bg-black mb-10">
+              <div className="relative w-full flex-grow min-h-[340px] md:min-h-[380px] rounded-3xl overflow-hidden bg-black mb-10">
                 <AutoplayVideo
                   src="/front-cover.mp4"
                   className="absolute inset-0 w-full h-full object-contain"
@@ -188,7 +188,7 @@ export default function Home() {
               </div>
             </div>
             <div className="bg-on-surface text-surface rounded-4xl p-10 md:p-14 flex flex-col md:flex-row overflow-hidden relative">
-              <div className="md:w-1/2 flex flex-col justify-start space-y-6 relative z-10">
+              <div className="md:w-1/2 flex flex-col justify-center space-y-6 relative z-10">
                 <div>
                   <span className="text-[11px] font-bold tracking-[0.2em] uppercase text-primary-fixed block mb-4">
                     The Ecosystem
