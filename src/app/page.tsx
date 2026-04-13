@@ -187,34 +187,17 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="bg-on-surface text-surface rounded-4xl p-10 md:p-14 flex flex-col justify-center overflow-hidden relative">
-              <div
-                aria-hidden
-                className="pointer-events-none absolute inset-y-0 right-0 md:w-[58%]"
-                style={{
-                  WebkitMaskImage:
-                    "radial-gradient(circle at 55% 50%, black 30%, transparent 62%)",
-                  maskImage:
-                    "radial-gradient(circle at 55% 50%, black 30%, transparent 62%)",
-                }}
-              >
-                <Image
-                  src="/m1-mback.png"
-                  alt=""
-                  fill
-                  sizes="(max-width: 768px) 80vw, 560px"
-                  className="object-contain select-none"
-                />
-              </div>
-
-              <div className="relative z-10 max-w-sm">
-                <span className="text-xs font-bold uppercase tracking-widest text-primary-fixed mb-4 block">
-                  The Ecosystem
-                </span>
-                <h3 className="text-4xl md:text-5xl font-bold tracking-tight mb-5 whitespace-nowrap">
-                  Meet the MBack.
-                </h3>
-                <p className="text-base md:text-lg text-surface-dim/80 leading-relaxed mb-8">
+            <div className="bg-on-surface text-surface rounded-4xl p-10 md:p-14 flex flex-col md:flex-row overflow-hidden relative">
+              <div className="md:w-1/2 flex flex-col justify-start space-y-6 relative z-10">
+                <div>
+                  <span className="text-[11px] font-bold tracking-[0.2em] uppercase text-primary-fixed block mb-4">
+                    The Ecosystem
+                  </span>
+                  <h3 className="text-[42px] md:text-[44px] font-black text-white leading-[0.95] tracking-[-0.04em] whitespace-nowrap">
+                    Meet the MBack.
+                  </h3>
+                </div>
+                <p className="text-surface-dim/75 text-[17px] leading-relaxed max-w-[280px]">
                   The ultimate mounting plate. Attach it to your backpack, bike,
                   or belt and the M1 becomes an extension of your movement.
                 </p>
@@ -227,6 +210,34 @@ export default function Home() {
                     arrow_forward
                   </span>
                 </a>
+              </div>
+
+              <div className="mt-12 md:mt-0 md:w-1/2 relative flex items-center justify-center min-h-[320px]">
+                <div
+                  aria-hidden
+                  className="absolute inset-0 scale-125 blur-2xl pointer-events-none"
+                  style={{
+                    background:
+                      "radial-gradient(circle at center, rgba(215, 227, 255, 0.16) 0%, rgba(215, 227, 255, 0) 60%)",
+                  }}
+                />
+                <div
+                  className="relative z-10 w-72 h-72 md:w-80 md:h-80 pointer-events-none"
+                  style={{
+                    WebkitMaskImage:
+                      "radial-gradient(circle at center, black 38%, transparent 72%)",
+                    maskImage:
+                      "radial-gradient(circle at center, black 38%, transparent 72%)",
+                  }}
+                >
+                  <Image
+                    src="/m1-mback.png"
+                    alt="MBack magnetic mounting plate"
+                    fill
+                    sizes="(max-width: 768px) 288px, 320px"
+                    className="object-contain drop-shadow-[0_25px_60px_rgba(0,0,0,0.8)]"
+                  />
+                </div>
               </div>
             </div>
           </div>
