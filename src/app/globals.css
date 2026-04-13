@@ -95,3 +95,24 @@ body {
   transform: scale(1.01);
 }
 
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-22px) rotate(-0.4deg);
+  }
+}
+
+.hero-float {
+  animation: hero-float 6.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-float {
+    animation: none;
+  }
+}
+
