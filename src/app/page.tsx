@@ -164,7 +164,7 @@ export default function Home() {
           </div>
           <div className="max-w-[1400px] mx-auto grid md:grid-cols-2 gap-8 items-stretch">
             <div className="bento-card rounded-4xl p-10 md:p-12 flex flex-col overflow-hidden">
-              <div className="relative w-full flex-grow min-h-[340px] md:min-h-[380px] rounded-3xl overflow-hidden bg-black mb-10">
+              <div className="relative w-full flex-grow min-h-[300px] md:min-h-[320px] rounded-3xl overflow-hidden bg-black mb-10">
                 <AutoplayVideo
                   src="/front-cover.mp4"
                   className="absolute inset-0 w-full h-full object-contain"
@@ -201,6 +201,26 @@ export default function Home() {
                   The ultimate mounting plate. Attach it to your backpack, bike,
                   or belt and the M1 becomes an extension of your movement.
                 </p>
+                <div className="pt-2">
+                  <p className="text-[10px] font-bold tracking-[0.22em] uppercase text-primary-fixed/60 mb-3">
+                    Works With
+                  </p>
+                  <div className="flex flex-wrap gap-2 max-w-[320px]">
+                    {[
+                      "Backpacks",
+                      "Bikes",
+                      "Belt loops",
+                      "Metal surfaces",
+                    ].map((label) => (
+                      <span
+                        key={label}
+                        className="px-3 py-1.5 rounded-full bg-white/5 text-[11px] font-semibold text-white/75 border border-white/[0.08]"
+                      >
+                        {label}
+                      </span>
+                    ))}
+                  </div>
+                </div>
                 <a
                   href="#"
                   className="inline-flex items-center gap-2 text-primary-fixed font-semibold hover:gap-3 transition-all"
