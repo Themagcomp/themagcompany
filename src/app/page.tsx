@@ -164,7 +164,7 @@ export default function Home() {
           </div>
           <div className="max-w-[1400px] mx-auto grid md:grid-cols-2 gap-8 items-stretch">
             <div className="bento-card rounded-4xl p-10 md:p-12 flex flex-col overflow-hidden">
-              <div className="relative w-full flex-grow min-h-[460px] md:min-h-[520px] rounded-3xl overflow-hidden bg-black mb-10">
+              <div className="relative w-full flex-grow min-h-[380px] md:min-h-[440px] rounded-3xl overflow-hidden bg-black mb-10">
                 <AutoplayVideo
                   src="/front-cover.mp4"
                   className="absolute inset-0 w-full h-full object-contain"
@@ -187,15 +187,34 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="bg-on-surface text-surface rounded-4xl p-10 md:p-14 flex flex-col justify-between overflow-hidden relative min-h-[720px]">
-              <div className="relative z-10">
+            <div className="bg-on-surface text-surface rounded-4xl p-10 md:p-14 flex flex-col overflow-hidden relative">
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-0 md:left-[38%] md:right-[-8%] md:top-[18%] md:bottom-[-6%]"
+                style={{
+                  WebkitMaskImage:
+                    "radial-gradient(circle at center, black 34%, transparent 72%)",
+                  maskImage:
+                    "radial-gradient(circle at center, black 34%, transparent 72%)",
+                }}
+              >
+                <Image
+                  src="/m1-mback.png"
+                  alt=""
+                  fill
+                  sizes="(max-width: 768px) 80vw, 560px"
+                  className="object-contain select-none"
+                />
+              </div>
+
+              <div className="relative z-10 max-w-md">
                 <span className="text-xs font-bold uppercase tracking-widest text-primary-fixed mb-4 block">
                   The Ecosystem
                 </span>
                 <h3 className="text-5xl md:text-6xl font-bold tracking-tight mb-6">
                   Meet the MBack.
                 </h3>
-                <p className="text-lg text-surface-dim/80 leading-relaxed mb-10 max-w-md">
+                <p className="text-lg text-surface-dim/80 leading-relaxed mb-10">
                   The ultimate mounting plate. Attach it to your backpack, bike,
                   or belt and the M1 becomes an extension of your movement.
                 </p>
@@ -208,15 +227,6 @@ export default function Home() {
                     arrow_forward
                   </span>
                 </a>
-              </div>
-              <div className="relative mt-12 md:absolute md:right-[-14%] md:bottom-[-10%] md:w-[78%] aspect-square pointer-events-none">
-                <Image
-                  src="/m1-mback.png"
-                  alt="MBack magnetic mounting plate"
-                  fill
-                  sizes="(max-width: 768px) 80vw, 560px"
-                  className="object-contain select-none"
-                />
               </div>
             </div>
           </div>
