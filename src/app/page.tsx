@@ -123,16 +123,18 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="md:col-span-4 bento-card rounded-4xl p-10 flex flex-col">
+              <div className="md:col-span-4 bento-card rounded-4xl p-10 flex flex-col overflow-hidden">
                 <h3 className="text-2xl font-bold mb-3">MagSafe Ready</h3>
-                <p className="text-on-surface-variant leading-snug mb-8">
+                <p className="text-on-surface-variant leading-snug mb-6">
                   Snaps directly to your iPhone or any magnetic surface with
                   industrial-grade strength.
                 </p>
-                <div className="flex-grow flex items-center justify-center">
-                  <span className="material-symbols-outlined text-6xl text-primary/40">
-                    flash_on
-                  </span>
+                <div className="relative flex-grow min-h-[200px] rounded-3xl overflow-hidden bg-black">
+                  <AutoplayVideo
+                    src="/magnet-use.mp4"
+                    loop
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
                 </div>
               </div>
               <div className="md:col-span-4 bento-card rounded-4xl p-10 flex flex-col">
