@@ -209,8 +209,14 @@ export default function Home() {
                   </span>
                 </a>
               </div>
-              <div className="mt-12 md:absolute md:right-[-12%] md:bottom-[-8%] md:w-3/4 aspect-square bg-white/5 rounded-full flex items-center justify-center border border-white/10 backdrop-blur-sm">
-                <span className="text-white/20 font-medium">MBack Plate</span>
+              <div className="relative mt-12 md:absolute md:right-[-14%] md:bottom-[-10%] md:w-[78%] aspect-square pointer-events-none">
+                <Image
+                  src="/m1-mback.png"
+                  alt="MBack magnetic mounting plate"
+                  fill
+                  sizes="(max-width: 768px) 80vw, 560px"
+                  className="object-contain select-none"
+                />
               </div>
             </div>
           </div>
