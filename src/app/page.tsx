@@ -187,15 +187,15 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="bg-on-surface text-surface rounded-4xl p-10 md:p-14 flex flex-col overflow-hidden relative">
+            <div className="bg-on-surface text-surface rounded-4xl p-10 md:p-14 flex flex-col justify-center overflow-hidden relative">
               <div
                 aria-hidden
-                className="pointer-events-none absolute inset-0 md:left-[38%] md:right-[-8%] md:top-[18%] md:bottom-[-6%]"
+                className="pointer-events-none absolute inset-y-0 right-0 md:w-[58%]"
                 style={{
                   WebkitMaskImage:
-                    "radial-gradient(circle at center, black 34%, transparent 72%)",
+                    "radial-gradient(circle at 55% 50%, black 30%, transparent 62%)",
                   maskImage:
-                    "radial-gradient(circle at center, black 34%, transparent 72%)",
+                    "radial-gradient(circle at 55% 50%, black 30%, transparent 62%)",
                 }}
               >
                 <Image
@@ -207,14 +207,14 @@ export default function Home() {
                 />
               </div>
 
-              <div className="relative z-10 max-w-md">
+              <div className="relative z-10 max-w-sm">
                 <span className="text-xs font-bold uppercase tracking-widest text-primary-fixed mb-4 block">
                   The Ecosystem
                 </span>
-                <h3 className="text-5xl md:text-6xl font-bold tracking-tight mb-6">
+                <h3 className="text-4xl md:text-5xl font-bold tracking-tight mb-5 whitespace-nowrap">
                   Meet the MBack.
                 </h3>
-                <p className="text-lg text-surface-dim/80 leading-relaxed mb-10">
+                <p className="text-base md:text-lg text-surface-dim/80 leading-relaxed mb-8">
                   The ultimate mounting plate. Attach it to your backpack, bike,
                   or belt and the M1 becomes an extension of your movement.
                 </p>
