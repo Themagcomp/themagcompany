@@ -167,7 +167,7 @@ export default function Home() {
               <div className="relative w-full flex-grow min-h-[460px] md:min-h-[520px] rounded-3xl overflow-hidden bg-black mb-10">
                 <AutoplayVideo
                   src="/front-cover.mp4"
-                  className="absolute inset-0 w-full h-full object-cover scale-[1.18]"
+                  className="absolute inset-0 w-full h-full object-contain"
                 />
               </div>
               <div className="px-2">
