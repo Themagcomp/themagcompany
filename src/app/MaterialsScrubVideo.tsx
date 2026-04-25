@@ -62,7 +62,7 @@ export default function MaterialsScrubVideo() {
           shell,
           {
             width: "100vw",
-            height: "100vh",
+            height: "100dvh",
             maxWidth: "100vw",
             borderRadius: 0,
             boxShadow: "0 0 0 0 rgba(0,0,0,0)",
@@ -72,7 +72,24 @@ export default function MaterialsScrubVideo() {
           0,
         );
 
-        // PHASE 2 — Scrub: 0.15 → 0.85
+        // PHASE 2 — Scrub: 0.15 → 0.85.
+        // Where requestVideoFrameCallback is supported (Chrome/Edge/Safari 15.4+),
+        // throttle currentTime writes to actual video frame boundaries so fast
+        // flick-scrolls don't queue up sub-frame updates that thrash the decoder.
+        type WithRVFC = HTMLVideoElement & {
+          requestVideoFrameCallback?: (cb: () => void) => number;
+        };
+        const v = video as WithRVFC;
+        const supportsRVFC = typeof v.requestVideoFrameCallback === "function";
+        let pendingTime: number | null = null;
+        let rvfcQueued = false;
+        const flush = () => {
+          rvfcQueued = false;
+          if (pendingTime !== null) {
+            video.currentTime = pendingTime;
+            pendingTime = null;
+          }
+        };
         tl.to(
           {},
           {
@@ -80,8 +97,16 @@ export default function MaterialsScrubVideo() {
             ease: "none",
             onUpdate: function () {
               const localProgress = this.progress();
-              if (video.duration > 0) {
-                video.currentTime = localProgress * video.duration;
+              if (video.duration <= 0) return;
+              const target = localProgress * video.duration;
+              if (supportsRVFC) {
+                pendingTime = target;
+                if (!rvfcQueued) {
+                  rvfcQueued = true;
+                  v.requestVideoFrameCallback!(flush);
+                }
+              } else {
+                video.currentTime = target;
               }
             },
           },
@@ -127,8 +152,8 @@ export default function MaterialsScrubVideo() {
   }
 
   return (
-    <section ref={outerRef} className="relative" style={{ height: "400vh" }}>
-      <div ref={pinRef} className="h-screen w-full flex items-center justify-center overflow-hidden">
+    <section ref={outerRef} className="relative h-[300vh] md:h-[400vh]">
+      <div ref={pinRef} className="h-[100dvh] w-full flex items-center justify-center overflow-hidden">
         <div
           ref={shellRef}
           className="relative aspect-video overflow-hidden bg-black"
