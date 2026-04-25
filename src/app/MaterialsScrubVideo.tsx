@@ -1,6 +1,6 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useRef, useSyncExternalStore } from "react";
 
 const QUERY = "(prefers-reduced-motion: reduce)";
 
@@ -15,6 +15,7 @@ const getServerSnapshot = () => true;
 
 export default function MaterialsScrubVideo() {
   const reducedMotion = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   if (reducedMotion) {
     return (
@@ -33,7 +34,18 @@ export default function MaterialsScrubVideo() {
 
   return (
     <div className="max-w-6xl mx-auto">
-      <div className="relative aspect-video rounded-[2rem] overflow-hidden shadow-[0_80px_160px_-40px_rgba(0,0,0,0.6)] bg-black" />
+      <div className="relative aspect-video rounded-[2rem] overflow-hidden shadow-[0_80px_160px_-40px_rgba(0,0,0,0.6)]">
+        <video
+          ref={videoRef}
+          src="/m1-exploded.mp4"
+          muted
+          playsInline
+          preload="auto"
+          disablePictureInPicture
+          disableRemotePlayback
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </div>
     </div>
   );
 }
