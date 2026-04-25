@@ -147,7 +147,7 @@ export default function MaterialsScrubVideo() {
             preload="auto"
             disablePictureInPicture
             disableRemotePlayback
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-contain"
           />
         </div>
       </div>
