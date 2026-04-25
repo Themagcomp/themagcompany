@@ -1,5 +1,6 @@
 import Image from "next/image";
 import AutoplayVideo from "./AutoplayVideo";
+import MaterialsScrubVideo from "./MaterialsScrubVideo";
 
 export default function Home() {
   return (
@@ -347,21 +348,11 @@ export default function Home() {
               beating, refined enough to disappear into your daily carry.
             </p>
           </div>
-          <div className="max-w-6xl mx-auto">
-            <div className="relative aspect-video rounded-[2rem] overflow-hidden shadow-[0_80px_160px_-40px_rgba(0,0,0,0.6)]">
-              <Image
-                src="/m1-materials.png"
-                alt="Maglight M1 materials breakdown: PA12 Nylon casing, black oxide M3 screws, TPU gasket and buttons, polycarbonate window"
-                fill
-                sizes="(max-width: 1200px) 96vw, 1200px"
-                className="object-cover"
-              />
-            </div>
-            <p className="mt-6 text-center text-xs text-white/40 font-medium italic">
-              * Material spec reflects the base Kickstarter build. Stretch goals
-              will upgrade select components.
-            </p>
-          </div>
+          <MaterialsScrubVideo />
+          <p className="mt-6 text-center text-xs text-white/40 font-medium italic max-w-6xl mx-auto">
+            * Material spec reflects the base Kickstarter build. Stretch goals
+            will upgrade select components.
+          </p>
         </section>
 
         <section className="py-32 bg-white px-6">
