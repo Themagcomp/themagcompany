@@ -1,6 +1,7 @@
 import Image from "next/image";
 import AutoplayVideo from "./AutoplayVideo";
 import MaterialsScrubVideo from "./MaterialsScrubVideo";
+import ModeSwitcher from "./ModeSwitcher";
 
 export default function Home() {
   return (
@@ -168,30 +169,7 @@ export default function Home() {
             </p>
           </div>
           <div className="max-w-[1400px] mx-auto grid md:grid-cols-2 gap-8 items-stretch">
-            <div className="bento-card rounded-4xl p-10 md:p-12 flex flex-col overflow-hidden">
-              <div className="relative w-full flex-grow min-h-[300px] md:min-h-[320px] rounded-3xl overflow-hidden bg-black mb-10">
-                <AutoplayVideo
-                  src="/front-cover.mp4"
-                  className="absolute inset-0 w-full h-full object-contain"
-                />
-              </div>
-              <div className="px-2">
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3">
-                  Form Factor
-                </p>
-                <h4 className="text-4xl font-bold tracking-tight mb-4">
-                  Compact Design.
-                </h4>
-                <p className="text-lg text-on-surface-variant leading-relaxed max-w-md">
-                  Pocket-sized at just{" "}
-                  <span className="text-on-surface font-semibold">
-                    50 × 48 × 20mm
-                  </span>
-                  . Light enough to take anywhere, small enough to forget
-                  it&apos;s there.
-                </p>
-              </div>
-            </div>
+            <ModeSwitcher />
             <div className="bg-on-surface text-surface rounded-4xl p-10 md:p-14 flex flex-col md:flex-row overflow-hidden relative">
               <div className="md:w-1/2 flex flex-col justify-center space-y-6 relative z-10">
                 <div>
@@ -237,32 +215,13 @@ export default function Home() {
                 </a>
               </div>
 
-              <div className="mt-12 md:mt-0 md:w-1/2 relative flex items-center justify-center min-h-[320px]">
-                <div
-                  aria-hidden
-                  className="absolute inset-0 scale-125 blur-2xl pointer-events-none"
-                  style={{
-                    background:
-                      "radial-gradient(circle at center, rgba(215, 227, 255, 0.16) 0%, rgba(215, 227, 255, 0) 60%)",
-                  }}
+              <div className="mt-12 md:mt-0 md:w-1/2 flex items-center justify-center min-w-0">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/m1-mback.png"
+                  alt="MBack magnetic mounting plate"
+                  className="w-full max-w-[260px] md:max-w-[300px] h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
                 />
-                <div
-                  className="relative z-10 w-72 h-72 md:w-80 md:h-80 pointer-events-none"
-                  style={{
-                    WebkitMaskImage:
-                      "radial-gradient(circle at center, black 38%, transparent 72%)",
-                    maskImage:
-                      "radial-gradient(circle at center, black 38%, transparent 72%)",
-                  }}
-                >
-                  <Image
-                    src="/m1-mback.png"
-                    alt="MBack magnetic mounting plate"
-                    fill
-                    sizes="(max-width: 768px) 288px, 320px"
-                    className="object-contain drop-shadow-[0_25px_60px_rgba(0,0,0,0.8)]"
-                  />
-                </div>
               </div>
             </div>
           </div>
