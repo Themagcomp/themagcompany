@@ -82,11 +82,8 @@ export default function Home() {
             >
               Back on Kickstarter
             </a>
-            <p className="text-sm text-on-surface font-semibold">
-              From $49 or $12/mo. for 4 mos.
-            </p>
             <p className="text-xs text-on-surface-variant/60 font-medium">
-              Shipping worldwide Fall 2026
+              Shipping begins August 2026
             </p>
           </div>
         </section>
@@ -153,10 +150,10 @@ export default function Home() {
                 </div>
               </div>
               <div className="md:col-span-4 bento-card rounded-4xl p-10 flex flex-col">
-                <h3 className="text-2xl font-bold mb-3">60h Battery</h3>
+                <h3 className="text-2xl font-bold mb-3">10h Battery</h3>
                 <p className="text-on-surface-variant leading-snug mb-8">
-                  Efficient power management ensures you&apos;re never left in
-                  the dark when it matters most.
+                  An 800 mAh cell delivers a full day of use, with USB-C
+                  recharging in just 45 minutes.
                 </p>
                 <div className="flex-grow flex items-center justify-center">
                   <span className="material-symbols-outlined text-6xl text-primary/40">
@@ -175,8 +172,8 @@ export default function Home() {
               Your lighting, your way.
             </h2>
             <p className="text-xl text-on-surface-variant leading-relaxed max-w-2xl mx-auto">
-              Five distinct modes from ambient glow to emergency strobe. Tweak
-              everything with the tactile, satisfying dial.
+              Cycle between On, Flash, and Strobe with a dedicated button. Hold
+              it to trigger SOS. Brightness adjusts from 50 to 400 lumens.
             </p>
           </div>
           <div className="max-w-[1400px] mx-auto grid md:grid-cols-2 gap-8 items-stretch">
@@ -221,10 +218,10 @@ export default function Home() {
                   </p>
                   <div className="flex flex-wrap gap-2 max-w-[320px]">
                     {[
-                      "GoPro Mount",
-                      "Tripod Adapter",
-                      "Helmet Clip",
-                      "Bike Rail",
+                      "Hanging Clip",
+                      "Bike Connector",
+                      "Wall Mount",
+                      "Handle",
                     ].map((label) => (
                       <span
                         key={label}
@@ -304,25 +301,25 @@ export default function Home() {
                 <span className="material-symbols-outlined text-primary text-4xl mb-6">
                   water_drop
                 </span>
-                <h4 className="font-bold text-on-surface text-lg">IP68 Water</h4>
+                <h4 className="font-bold text-on-surface text-lg">IPX6 Water</h4>
               </div>
               <div className="p-8 bg-white rounded-3xl shadow-[0_2px_10px_rgba(0,0,0,0.02)] border border-black/5 flex flex-col items-center">
                 <span className="material-symbols-outlined text-primary text-4xl mb-6">
-                  air
+                  wb_sunny
                 </span>
-                <h4 className="font-bold text-on-surface text-lg">Dust Proof</h4>
+                <h4 className="font-bold text-on-surface text-lg">UV Resistant</h4>
               </div>
               <div className="p-8 bg-white rounded-3xl shadow-[0_2px_10px_rgba(0,0,0,0.02)] border border-black/5 flex flex-col items-center">
                 <span className="material-symbols-outlined text-primary text-4xl mb-6">
                   height
                 </span>
-                <h4 className="font-bold text-on-surface text-lg">2m Drop</h4>
+                <h4 className="font-bold text-on-surface text-lg">1m Drop</h4>
               </div>
               <div className="p-8 bg-white rounded-3xl shadow-[0_2px_10px_rgba(0,0,0,0.02)] border border-black/5 flex flex-col items-center">
                 <span className="material-symbols-outlined text-primary text-4xl mb-6">
                   ac_unit
                 </span>
-                <h4 className="font-bold text-on-surface text-lg">-20°C Ready</h4>
+                <h4 className="font-bold text-on-surface text-lg">-10°C to 40°C</h4>
               </div>
             </div>
           </div>
@@ -363,8 +360,8 @@ export default function Home() {
                 </div>
                 <h4 className="text-xl font-bold mb-1">Concept &amp; Design</h4>
                 <p className="text-on-surface-variant">
-                  Completed Q1 2024. Finalized industrial design and material
-                  sourcing.
+                  Over a year of iteration and real-world testing. Industrial
+                  design and material sourcing finalized.
                 </p>
               </div>
               <div className="relative pl-16">
@@ -377,8 +374,8 @@ export default function Home() {
                   Kickstarter Launch
                 </h4>
                 <p className="text-on-surface-variant font-medium">
-                  Live Now! Joining forces with the community to bring M1 to
-                  life.
+                  April 2026. Live now. Joining forces with the community to
+                  bring M1 to life.
                 </p>
               </div>
               <div className="relative pl-16">
@@ -386,11 +383,11 @@ export default function Home() {
                   <div className="w-3 h-3 rounded-full bg-outline-variant/30"></div>
                 </div>
                 <h4 className="text-xl font-bold mb-1 text-on-surface-variant/50">
-                  Mass Production
+                  Production
                 </h4>
                 <p className="text-on-surface-variant/40">
-                  Scheduled for Q3 2024. Assembly in our ISO-certified
-                  facilities.
+                  May to July 2026. Order parts, finalize commercial design,
+                  finish production.
                 </p>
               </div>
               <div className="relative pl-16">
@@ -398,10 +395,10 @@ export default function Home() {
                   <div className="w-3 h-3 rounded-full bg-outline-variant/30"></div>
                 </div>
                 <h4 className="text-xl font-bold mb-1 text-on-surface-variant/50">
-                  Global Shipping
+                  Shipping
                 </h4>
                 <p className="text-on-surface-variant/40">
-                  Landing in pockets and backpacks everywhere Q4 2024.
+                  Backers receive their M1 starting August 2026.
                 </p>
               </div>
             </div>
@@ -421,21 +418,21 @@ export default function Home() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               <div className="flex flex-col items-center">
-                <p className="text-5xl font-bold mb-2">18</p>
+                <p className="text-5xl font-bold mb-2">400</p>
                 <p className="text-xs uppercase tracking-widest text-on-surface-variant/60 font-bold">
-                  Months of R&amp;D
+                  Peak Lumens
                 </p>
               </div>
               <div className="flex flex-col items-center">
-                <p className="text-5xl font-bold mb-2">42</p>
+                <p className="text-5xl font-bold mb-2">10h</p>
                 <p className="text-xs uppercase tracking-widest text-on-surface-variant/60 font-bold">
-                  Prototypes
+                  Battery Life
                 </p>
               </div>
               <div className="flex flex-col items-center">
-                <p className="text-5xl font-bold mb-2">0</p>
+                <p className="text-5xl font-bold mb-2">45m</p>
                 <p className="text-xs uppercase tracking-widest text-on-surface-variant/60 font-bold">
-                  Compromises
+                  Full Recharge
                 </p>
               </div>
             </div>
