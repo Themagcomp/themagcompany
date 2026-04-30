@@ -69,9 +69,14 @@ export default function Home() {
           </div>
 
           <div className="relative z-20 mt-10 md:mt-12 flex flex-col items-center gap-3">
-            <button className="bg-primary-container text-on-primary px-8 py-3 rounded-full text-base font-semibold hover:opacity-90 transition-all shadow-[0_10px_30px_-10px_rgba(0,102,204,0.5)]">
+            <a
+              href="https://www.kickstarter.com/projects/magcompany/maglight-m1-a-campers-partner-in-crime"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-primary-container text-on-primary px-8 py-3 rounded-full text-base font-semibold hover:opacity-90 transition-all shadow-[0_10px_30px_-10px_rgba(0,102,204,0.5)]"
+            >
               Back on Kickstarter
-            </button>
+            </a>
             <p className="text-sm text-on-surface font-semibold">
               From $49 or $12/mo. for 4 mos.
             </p>
@@ -90,7 +95,7 @@ export default function Home() {
             <p className="text-xl text-on-surface-variant leading-relaxed max-w-2xl mx-auto">
               Engineered from impact-resistant polymers and sealed with TPU
               gaskets, the M1 is as light as it is durable. It&apos;s the
-              companion that doesn&apos;t just keep up—it leads the way.
+              companion that doesn&apos;t just keep up. It leads the way.
             </p>
           </div>
           <div className="max-w-6xl mx-auto relative aspect-video bg-[#f5f5f7] rounded-4xl overflow-hidden">
@@ -149,7 +154,7 @@ export default function Home() {
                   the dark when it matters most.
                 </p>
                 <div className="flex-grow flex items-center justify-center">
-                  <span className="material-symbols-outlined text-[10rem] leading-none text-primary/50">
+                  <span className="material-symbols-outlined text-6xl text-primary/40">
                     battery_charging_full
                   </span>
                 </div>
@@ -277,7 +282,7 @@ export default function Home() {
               <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-lg">
                 Snap it to the panel. Snap it to the toolbox. Snap it to the
                 rack in the basement. The M1 is already exactly where you
-                need it — hands free, beam steady, the moment the room goes
+                need it. Hands free, beam steady, the moment the room goes
                 dark.
               </p>
             </div>
@@ -439,7 +444,7 @@ export default function Home() {
             </h2>
             <p className="text-lg md:text-xl text-on-surface-variant leading-relaxed max-w-xl mx-auto mb-10">
               Drop your email and we&apos;ll notify you the moment the M1 hits
-              Kickstarter. No spam, no follow-ups — just one launch
+              Kickstarter. No spam, no follow-ups. Just one launch
               announcement.
             </p>
             <InterestForm />
