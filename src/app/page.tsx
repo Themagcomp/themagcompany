@@ -1,5 +1,6 @@
 import Image from "next/image";
 import AutoplayVideo from "./AutoplayVideo";
+import InterestForm from "./InterestForm";
 import MaterialsScrubVideo from "./MaterialsScrubVideo";
 import ModeSwitcher from "./ModeSwitcher";
 
@@ -24,13 +25,7 @@ export default function Home() {
             </a>
             <a
               className="text-xs font-medium text-on-surface/60 hover:text-primary transition-colors duration-300"
-              href="#reviews"
-            >
-              Reviews
-            </a>
-            <a
-              className="text-xs font-medium text-on-surface/60 hover:text-primary transition-colors duration-300"
-              href="#support"
+              href="#signup"
             >
               Support
             </a>
@@ -98,10 +93,14 @@ export default function Home() {
               companion that doesn&apos;t just keep up—it leads the way.
             </p>
           </div>
-          <div className="max-w-6xl mx-auto aspect-video bg-[#f5f5f7] rounded-4xl flex items-center justify-center">
-            <span className="text-on-surface-variant/40 font-medium">
-              M1 in Action — Outdoor Scene Placeholder
-            </span>
+          <div className="max-w-6xl mx-auto relative aspect-video bg-[#f5f5f7] rounded-4xl overflow-hidden">
+            <Image
+              src="/m1-adventure.jpg"
+              alt="Maglight M1 glowing on a rock beside a snow-edged stream"
+              fill
+              sizes="(max-width: 1280px) 100vw, 1152px"
+              className="object-cover"
+            />
           </div>
         </section>
 
@@ -113,18 +112,20 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-12 grid-rows-2 gap-6 h-full md:h-[800px]">
               <div className="md:col-span-8 md:row-span-2 bento-card rounded-4xl p-12 flex flex-col justify-between overflow-hidden relative">
                 <div className="max-w-md relative z-10">
-                  <h3 className="text-3xl font-bold mb-4">1000 Lumens</h3>
+                  <h3 className="text-3xl font-bold mb-4">400 Lumens</h3>
                   <p className="text-lg text-on-surface-variant leading-relaxed">
                     Blinding power in the palm of your hand. Precision
                     engineered optics for a uniform beam that reaches further.
                   </p>
                 </div>
-                <div className="flex-grow flex items-center justify-center py-12">
-                  <div className="w-full h-64 bg-surface-dim/20 rounded-2xl flex items-center justify-center border border-black/5">
-                    <span className="text-on-surface-variant/40 font-medium italic">
-                      Photo — High power beam visualization
-                    </span>
-                  </div>
+                <div className="relative flex-grow min-h-[280px] mt-8 rounded-2xl overflow-hidden border border-black/5 bg-black">
+                  <Image
+                    src="/m1-beam.jpg"
+                    alt="Maglight M1 beam visualized against a wall in a dark room"
+                    fill
+                    sizes="(max-width: 1280px) 60vw, 700px"
+                    className="object-cover"
+                  />
                 </div>
               </div>
               <div className="md:col-span-4 bento-card rounded-4xl p-10 flex flex-col overflow-hidden">
@@ -148,7 +149,7 @@ export default function Home() {
                   the dark when it matters most.
                 </p>
                 <div className="flex-grow flex items-center justify-center">
-                  <span className="material-symbols-outlined text-6xl text-primary/40">
+                  <span className="material-symbols-outlined text-[10rem] leading-none text-primary/50">
                     battery_charging_full
                   </span>
                 </div>
@@ -203,6 +204,29 @@ export default function Home() {
                       </span>
                     ))}
                   </div>
+                </div>
+                <div>
+                  <p className="text-[10px] font-bold tracking-[0.22em] uppercase text-primary-fixed/60 mb-3">
+                    Coming Next
+                  </p>
+                  <div className="flex flex-wrap gap-2 max-w-[320px]">
+                    {[
+                      "GoPro Mount",
+                      "Tripod Adapter",
+                      "Helmet Clip",
+                      "Bike Rail",
+                    ].map((label) => (
+                      <span
+                        key={label}
+                        className="px-3 py-1.5 rounded-full bg-transparent text-[11px] font-semibold text-white/45 border border-dashed border-white/20"
+                      >
+                        {label}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="mt-3 text-[11px] text-white/35 italic">
+                    A growing ecosystem of adapters in development.
+                  </p>
                 </div>
                 <a
                   href="#"
@@ -405,6 +429,20 @@ export default function Home() {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+        <section id="signup" className="py-32 bg-white px-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-primary font-semibold mb-2">Stay in the loop</p>
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
+              Be the first to know.
+            </h2>
+            <p className="text-lg md:text-xl text-on-surface-variant leading-relaxed max-w-xl mx-auto mb-10">
+              Drop your email and we&apos;ll notify you the moment the M1 hits
+              Kickstarter. No spam, no follow-ups — just one launch
+              announcement.
+            </p>
+            <InterestForm />
           </div>
         </section>
       </main>
