@@ -6,7 +6,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const QUERY = "(prefers-reduced-motion: reduce)";
+const QUERY =
+  "(prefers-reduced-motion: reduce), (pointer: coarse), (max-width: 1023px)";
 
 function subscribe(callback: () => void) {
   const mq = window.matchMedia(QUERY);

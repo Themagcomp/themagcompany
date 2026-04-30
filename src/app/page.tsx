@@ -44,7 +44,7 @@ export default function Home() {
       <main className="pt-14">
         <section
           id="overview"
-          className="relative min-h-[92vh] flex flex-col items-center justify-center text-center px-6 pt-20 pb-12 bg-white text-on-surface overflow-hidden"
+          className="relative min-h-[85svh] md:min-h-[92vh] flex flex-col items-center justify-center text-center px-6 pt-12 md:pt-20 pb-12 bg-white text-on-surface overflow-hidden"
         >
           <p className="relative z-20 text-[0.7rem] md:text-xs font-semibold tracking-[0.32em] uppercase text-on-surface/45 mb-3 md:mb-4">
             Introducing
@@ -52,7 +52,7 @@ export default function Home() {
 
           <h1
             aria-label="Maglight"
-            className="relative z-0 text-[22vw] md:text-[19vw] lg:text-[17vw] font-black tracking-[-0.055em] leading-[0.82] text-on-surface whitespace-nowrap select-none pointer-events-none"
+            className="relative z-0 text-[18vw] md:text-[19vw] lg:text-[17vw] font-black tracking-[-0.055em] leading-[0.82] text-on-surface whitespace-nowrap select-none pointer-events-none"
           >
             MAGLIGHT
           </h1>
@@ -184,7 +184,7 @@ export default function Home() {
                   <span className="text-[11px] font-bold tracking-[0.2em] uppercase text-primary-fixed block mb-4">
                     The Ecosystem
                   </span>
-                  <h3 className="text-[42px] md:text-[44px] font-black text-white leading-[0.95] tracking-[-0.04em] whitespace-nowrap">
+                  <h3 className="text-[34px] md:text-[44px] font-black text-white leading-[0.95] tracking-[-0.04em] md:whitespace-nowrap">
                     Meet the MBack.
                   </h3>
                 </div>
@@ -264,11 +264,11 @@ export default function Home() {
               src="/m1-in-action.jpg"
               alt="Maglight M1 magnetically attached to an electrical panel, beam cutting through the darkness"
               fill
+              priority
               sizes="100vw"
               className="object-cover object-right"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/75 to-transparent md:from-black md:via-black/60 md:to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black via-black/45 to-black md:bg-gradient-to-r md:from-black md:via-black/60 md:to-transparent" />
           </div>
 
           <div className="relative z-10 w-full px-6 md:px-16 lg:px-24 py-24">
