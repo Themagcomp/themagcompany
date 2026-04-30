@@ -30,9 +30,14 @@ export default function Home() {
               Support
             </a>
           </div>
-          <button className="bg-primary-container text-on-primary px-4 py-1.5 rounded-full font-medium text-xs tracking-tight hover:opacity-90 transition-all">
-            Buy
-          </button>
+          <a
+            href="https://www.kickstarter.com/projects/magcompany/maglight-m1-a-campers-partner-in-crime"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-primary-container text-on-primary px-4 py-1.5 rounded-full font-medium text-xs tracking-tight hover:opacity-90 transition-all"
+          >
+            Back
+          </a>
         </div>
       </nav>
 
